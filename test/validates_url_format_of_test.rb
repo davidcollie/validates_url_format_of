@@ -27,6 +27,8 @@ class ValidatesUrlFormatOfTest < MiniTest::Unit::TestCase
       'https://example.com',
       'http://xn--rksmrgs-5wao1o.nu', # Punycode
       'http://example.com.', # Explicit TLD root period
+      '//example.com/', # protocol relative
+      '//example.com/foo',
       'http://example.com./foo',
       'http://innsofaurora--com.rztrkr.com/accommodations/?rzreturn=1&rzsource=nc',
     ].each do |url|

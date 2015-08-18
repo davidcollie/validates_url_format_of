@@ -4,7 +4,7 @@ module ValidatesUrlFormatOf
   IPV4_PART = /\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]/ # 0-255
   REGEXP = %r{
     \A
-    https?://                                        # http:// or https://
+    (https?://|//)                                   # http:// or https:// or //
     ([^\s:@]+:[^\s:@]*@)?                            # optional username:pw@
     ( (xn--)?(\-|[a-z0-9])+([-.][a-z0-9]+)*\.[a-z]{2,6}\.? |  # domain (including Punycode/IDN)...
         #{IPV4_PART}(\.#{IPV4_PART}){3} )            # or IPv4
